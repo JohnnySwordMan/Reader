@@ -1,0 +1,11 @@
+include ':profile'
+include ':project'
+include ':wx'
+include ':knowledge'
+include ':home'
+include ':login:loginapi'
+include ':login:login'
+include ':common:util'
+include ':common:base'
+include ':app'
+rootProject.name = "Reader"

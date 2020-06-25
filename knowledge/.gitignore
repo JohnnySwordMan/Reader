@@ -1,0 +1,18 @@
+*.iml
+.idea/*
+.DS_Store
+.externalNativeBuild
+.cxx
+captures/
+
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+build/
+/*/build/
+
+# Local configuration
+local.properties
