@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_text_progress">#1e1e2e</color>
+    <color name="common_text_progress_message">#808080</color>
+    <color name="common_transparent">#00000000</color>
+</resources>
