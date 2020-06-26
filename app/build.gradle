@@ -37,6 +37,17 @@ dependencies {
     implementation "org.jetbrains.anko:anko-appcompat-v7-listeners:$anko_version"
     implementation "org.jetbrains.anko:anko-sdk15-coroutines:$anko_version"
 
+    // lottie
+    implementation "com.airbnb.android:lottie:${lottie_version}"
+
+    // rx
+    implementation "io.reactivex.rxjava2:rxjava:${rxjava_version}"
+    implementation "io.reactivex.rxjava2:rxandroid:${rxandroid_version}"
+
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutines_core_version}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines_android_version}"
+
     implementation project(":home")
     implementation project(":knowledge")
     implementation project(":wx")
