@@ -2,4 +2,7 @@
     package="com.mars.login">
 
     /
+    <application>
+        <activity android:name=".LoginActivity" />
+    </application>
 </manifest>

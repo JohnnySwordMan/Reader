@@ -54,6 +54,7 @@ dependencies {
     implementation project(":project")
     implementation project(":profile")
     implementation project(":login:login")
+    implementation project(":login:loginapi")
     implementation project(":common:base")
     implementation project(":common:util")
 }
