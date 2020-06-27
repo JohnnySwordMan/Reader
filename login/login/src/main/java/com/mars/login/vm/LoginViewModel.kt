@@ -2,6 +2,7 @@ package com.mars.login.vm
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.mars.common_base.exception.ApiErrorCode
 import com.mars.common_base.response.ERROR
 import com.mars.common_base.response.ErrorData
 import com.mars.common_base.user.manager.UserManager
@@ -66,5 +67,20 @@ class LoginViewModel(private val loginRepo: ILoginRepository) : RxViewModel() {
 
                 })
         )
+    }
+
+    fun checkUsernameAndPassword(username: String?, password: String?): Boolean {
+        return check(!username.isNullOrEmpty() && !password.isNullOrEmpty()) {
+            "用户名、密码不能为空"
+        }
+    }
+
+    private fun check(value: Boolean, lazyMessage: () -> Any): Boolean {
+        if (!value) {
+            val message = lazyMessage()
+            errorResult.value =
+                ErrorData(ApiErrorCode.ERROR_USERNAME_OR_PASSWORD, message.toString())
+        }
+        return value
     }
 }

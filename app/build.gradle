@@ -45,6 +45,11 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:${rxjava_version}"
     implementation "io.reactivex.rxjava2:rxandroid:${rxandroid_version}"
 
+    // retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
     // coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutines_core_version}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines_android_version}"
@@ -56,9 +61,17 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+
+    implementation 'cn.carbs.android:AvatarImageView:1.0.3'
+
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    kapt 'com.github.bumptech.glide:compiler:4.3.1'
+
     implementation project(":home")
     implementation project(":knowledge")
-    implementation project(":wx")
+    implementation project(':wechat')
     implementation project(":project")
     implementation project(":profile")
     implementation project(":login:login")

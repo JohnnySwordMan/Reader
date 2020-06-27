@@ -35,6 +35,7 @@ class WelcomeActivity : BaseActivity() {
     private fun goNext() {
         Logger.e(TAG, "goNext")
         MainActivity.startActivity(this)
+        finish()
     }
 
 

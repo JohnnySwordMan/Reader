@@ -1,6 +1,6 @@
 include ':profile'
 include ':project'
-include ':wx'
+include ':wechat'
 include ':knowledge'
 include ':home'
 include ':login:loginapi'

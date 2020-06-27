@@ -1,3 +1,12 @@
 <resources>
 	<string name="app_name">Reader</string>
+
+	<string name="home">home</string>
+	<string name="knowledge">knowledge</string>
+	<string name="wechat">wechat</string>
+	<string name="project">project</string>
+	<string name="me">me</string>
+
+	<string name="navigation_drawer_open">Open navigation drawer</string>
+	<string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

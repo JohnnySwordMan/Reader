@@ -42,6 +42,5 @@ object UserManager : IUserManager {
 
     override fun observerLoginStatus(): Observable<UserEvent> = publishUserStatus
 
-
 }
 

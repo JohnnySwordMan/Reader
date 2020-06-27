@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.mars.common_base.di.ViewModelFactory
+import com.mars.common_base.ext.hideSoftInput
+import com.mars.common_base.ext.yes
 import com.mars.common_base.ui.BaseFragment
 import com.mars.login.vm.LoginViewModel
 import com.mars.util.widget.LoadingUtil
@@ -54,7 +56,16 @@ class LoginFragment : BaseFragment() {
     private fun initView() {
         btnSubmit.onClick {
             LoadingUtil.show(activity!!, getString(R.string.login_ing))
-            mLoginViewModel.login("geyan0117", "geyan592115")
+            val username = username.text.toString().trim()
+            val password = password.text.toString().trim()
+
+            mLoginViewModel.checkUsernameAndPassword(
+                username,
+                password
+            ).yes {
+                activity?.hideSoftInput()
+                mLoginViewModel.login(username, password)
+            }
         }
     }
 
