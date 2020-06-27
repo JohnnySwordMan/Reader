@@ -5,4 +5,7 @@
     <string name="action_sign_in_short">Sign in</string>
 
     <string name="login_submit">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failure">登录失败</string>
+    <string name="login_ing">登录中...</string>
 </resources>
