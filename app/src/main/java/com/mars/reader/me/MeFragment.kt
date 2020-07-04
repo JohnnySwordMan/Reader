@@ -2,6 +2,7 @@ package com.mars.reader.me
 
 import android.os.Bundle
 import android.view.View
+import com.mars.core.ext.yes
 import com.mars.reader.R
 import com.mars.reader.account.AccountManager
 import com.mars.reader.core.base.ui.BaseFragment
@@ -23,10 +24,18 @@ class MeFragment : BaseFragment() {
         // 禁止下拉刷新
         refreshLayout.isEnabled = false
         initView()
+
+        register(UserManager.observerLoginStatus().subscribe {
+            updateView(it.isLogin())
+        })
     }
 
     private fun initView() {
-        if (AccountManager.isLogin()) {
+        updateView(AccountManager.isLogin())
+    }
+
+    private fun updateView(isLogin: Boolean) {
+        if (isLogin) {
             userAvatar.loadWithGlide(
                 currentUser!!.icon,
                 currentUser!!.nickname.first()
@@ -34,8 +43,8 @@ class MeFragment : BaseFragment() {
             tvUserId.text = currentUser!!.id.toString()
         } else {
             userAvatar.imageResource = R.drawable.ic_github
+            tvUserId.text = ""
         }
-
     }
 
     override fun getLayoutId(): Int = R.layout.main_fragment_me
