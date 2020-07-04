@@ -25,7 +25,7 @@
 
     <item
         android:id="@+id/me"
-        android:icon="@drawable/ic_profile"
+        android:icon="@drawable/ic_me"
         android:title="@string/me" />
 
 </menu>

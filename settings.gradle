@@ -1,11 +1,3 @@
-include ':profile'
-include ':project'
-include ':wechat'
-include ':knowledge'
-include ':home'
-include ':login:loginapi'
-include ':login:login'
-include ':common:util'
 include ':common:base'
-include ':app'
-rootProject.name = "Reader"
+include ':app', ':core', ':user'
+rootProject.name='Reader'

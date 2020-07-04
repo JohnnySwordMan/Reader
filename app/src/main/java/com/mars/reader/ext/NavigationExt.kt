@@ -7,11 +7,11 @@ import androidx.appcompat.view.menu.MenuItemImpl
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.mars.core.ext.log
+import com.mars.core.ext.otherwise
+import com.mars.core.ext.yes
+import com.mars.reader.home.nav.NavigationItem
 import com.google.android.material.navigation.NavigationView
-import com.mars.common_base.ext.otherwise
-import com.mars.common_base.ext.yes
-import com.mars.reader.navigation.NavigationItem
-import com.mars.util.ext.Logger
 
 
 // crossinline
@@ -42,7 +42,7 @@ inline fun NavigationView.doOnLayoutAvailable(crossinline block: () -> Unit) {
 @SuppressLint("RestrictedApi")
 fun NavigationView.selectItem(@IdRes resId: Int) {
     doOnLayoutAvailable {
-        Logger.e("gy","select Item: ${NavigationItem[resId].title}")
+        log("select Item: ${NavigationItem[resId].title}")
         setCheckedItem(resId)
         (menu.findItem(resId) as MenuItemImpl)()
     }

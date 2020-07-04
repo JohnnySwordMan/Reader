@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navHeader"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="@dimen/nav_header_height"
     android:background="@color/colorPrimary"
-    android:padding="16dp">
+    android:padding="@dimen/activity_horizontal_margin">
 
     <cn.carbs.android.avatarimageview.library.AvatarImageView
         android:id="@+id/userAvatar"
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="请登录"
-        android:textColor="#ffffff"
+        android:textColor="@color/text_on_main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userAvatar" />
 
@@ -30,8 +30,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="xxx@gmail.com"
-        android:textColor="#ffffff"
+        android:text="xx@kotliner.cn"
+        android:textColor="@color/text_on_main"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userName" />
 
