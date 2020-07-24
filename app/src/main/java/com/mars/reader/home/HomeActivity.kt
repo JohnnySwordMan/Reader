@@ -115,7 +115,7 @@ class HomeActivity : BaseActivity() {
 
     private fun onRankClick() {
         log("click rank")
-        RankActivity.startRankActivity(this)
+        RankActivity.startActivity(this)
     }
 
     override fun canImmersiveStyle(): Boolean {

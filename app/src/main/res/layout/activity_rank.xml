@@ -5,6 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <com.mars.base.view.RTitleBarView
+        android:id="@+id/layout_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <com.mars.reader.view.FixLuRecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

@@ -2,6 +2,7 @@ package com.mars.reader.rank
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,13 +13,17 @@ import com.mars.reader.rank.adapter.RankListAdapter
 import com.mars.reader.rank.model.RankPage
 import com.mars.reader.rank.vm.RankViewModel
 import com.github.jdsjlzx.recyclerview.LuRecyclerViewAdapter
+import com.mars.base.view.RTitleBarView
 import kotlinx.android.synthetic.main.activity_rank.*
+import org.jetbrains.anko.sdk15.listeners.onClick
 import javax.inject.Inject
 
 class RankActivity : BaseActivity() {
 
     private lateinit var rankViewModel: RankViewModel
     private lateinit var rankListAdapter: RankListAdapter
+    private var titleView: RTitleBarView? = null
+    private var ivClose: ImageView? = null
 
     private var currentPage = PAGE_START
 
@@ -29,6 +34,8 @@ class RankActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rank)
+        initView()
+
         rankViewModel = ViewModelProviders.of(this, mFactory).get(RankViewModel::class.java)
 
         rankListAdapter = RankListAdapter()
@@ -41,6 +48,15 @@ class RankActivity : BaseActivity() {
         }
         initData()
         observerData()
+    }
+
+    private fun initView() {
+        titleView = findViewById(R.id.layout_title_bar)
+        ivClose = findViewById(R.id.iv_left)
+        titleView?.setTitle(getString(R.string.rank_title))
+        ivClose!!.onClick {
+            finish()
+        }
     }
 
     private fun observerData() {
@@ -85,7 +101,7 @@ class RankActivity : BaseActivity() {
 
         const val PAGE_START = 1
 
-        fun startRankActivity(activity: BaseActivity) {
+        fun startActivity(activity: BaseActivity) {
             val intent = Intent(activity, RankActivity::class.java)
             activity.startActivity(intent)
         }

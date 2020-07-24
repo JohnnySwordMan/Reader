@@ -1,3 +1,5 @@
+include ':module:collectapi'
+include ':module:collect'
 include ':common:base'
 include ':app', ':core', ':user'
 rootProject.name='Reader'

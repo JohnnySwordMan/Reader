@@ -2,15 +2,17 @@ package com.mars.reader.me
 
 import android.os.Bundle
 import android.view.View
-import com.mars.core.ext.yes
 import com.mars.reader.R
 import com.mars.reader.account.AccountManager
+import com.mars.reader.core.base.ui.BaseActivity
 import com.mars.reader.core.base.ui.BaseFragment
 import com.mars.reader.ext.loadWithGlide
 import com.mars.reader.home.HomeActivity
+import com.mars.reader.rank.RankActivity
 import com.mars.user.manager.UserManager
 import kotlinx.android.synthetic.main.main_fragment_me.*
 import org.jetbrains.anko.imageResource
+import org.jetbrains.anko.sdk15.listeners.onClick
 
 class MeFragment : BaseFragment() {
 
@@ -32,6 +34,9 @@ class MeFragment : BaseFragment() {
 
     private fun initView() {
         updateView(AccountManager.isLogin())
+        containerScore.onClick {
+            RankActivity.startActivity(activity as BaseActivity)
+        }
     }
 
     private fun updateView(isLogin: Boolean) {
