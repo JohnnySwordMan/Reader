@@ -40,66 +40,63 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.core:core-ktx:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
-    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation Libs.kotlin_stdlib_jdk7
+    implementation Libs.kotlin_reflect
 
-    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    implementation "android.arch.lifecycle:extensions:1.1.1"
 
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation Libs.androidx_appcompat
+    implementation Libs.androidx_core_ktx
+    implementation Libs.androidx_constraintlayout
 
-    implementation 'org.slf4j:slf4j-api:1.7.21'
-    implementation 'org.slf4j:slf4j-simple:1.7.21'
+    implementation Libs.androidx_coordinatorlayout
+    implementation Libs.material
 
-    implementation "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
-    implementation "com.google.dagger:dagger-android:$dagger_version"
-    implementation "com.google.dagger:dagger-android-support:$dagger_version"
-    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation Libs.lifecycle
 
-    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
-    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation Libs.okhttp3_logging_interceptor
+    implementation Libs.okhttp3_okhttp
 
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    
-    implementation "org.jetbrains.anko:anko-commons:$anko_version"
-    implementation "org.jetbrains.anko:anko-sdk15:$anko_version"
-    implementation "org.jetbrains.anko:anko-sdk15-listeners:$anko_version"
-    implementation "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
-    implementation "org.jetbrains.anko:anko-appcompat-v7-listeners:$anko_version"
-    implementation "org.jetbrains.anko:anko-sdk15-coroutines:$anko_version"
+    implementation Libs.slf4j_api
+    implementation Libs.slf4j_simple
 
-    implementation 'com.github.jdsjlzx:LRecyclerView:1.5.4.3'
-    implementation 'cn.carbs.android:AvatarImageView:1.0.3'
+    implementation Libs.dagger
+    kapt Libs.dagger_compiler
+    implementation Libs.dagger_android
+    implementation Libs.dagger_android_support
+    kapt Libs.dagger_android_processor
 
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
-    kapt 'com.github.bumptech.glide:compiler:4.3.1'
+    implementation Libs.rxjava
+    implementation Libs.rxandroid
 
-    implementation 'com.just.agentweb:agentweb:4.1.2'
+    implementation Libs.retrofit
+    implementation Libs.retrofit_adapter_rxjava2
+    implementation Libs.retrofit_converter_gson
 
-    implementation 'com.google.android:flexbox:2.0.1'
+    implementation Libs.anko_commons
+    implementation Libs.anko_sdk15
+    implementation Libs.anko_sdk15_coroutines
+    implementation Libs.anko_sdk15_listeners
+    implementation Libs.anko_appcompat_v7
+    implementation Libs.anko_appcompat_v7_listeners
 
-    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation Libs.jdsjlzx_lrecyclerview
+    implementation Libs.avatarImageView
 
-    implementation project(":core")
-    implementation project(":user")
+    implementation Libs.glide
+    kapt Libs.glide_compiler
 
-    implementation 'com.squareup.leakcanary:leakcanary-android:2.2'
+    implementation Libs.agentweb
+    implementation Libs.flexbox
+    implementation Libs.roundedimageview
 
-    // lottie
-    implementation "com.airbnb.android:lottie:$lottie_version"
+    implementation Libs.leakcanary
 
-    // coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_core_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android_version"
+    implementation Libs.lottie
+    implementation Libs.coroutines_core
+    implementation Libs.coroutines_android
 
     implementation project(":common:base")
+    implementation project(":core")
+    implementation project(":user")
 }
