@@ -4,12 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mars.core.exception.ApiErrorCode
 import com.mars.core.exception.ApiException
-import com.mars.core.rx.RxViewModel
+import com.mars.core.base.BaseViewModel
 import com.mars.reader.knowledge.model.ChapterData
 import com.mars.reader.home.model.ArticlePage
 import com.mars.reader.project.repo.ProjectRepository
 
-class ProjectViewModel(private val repo: ProjectRepository) : RxViewModel() {
+class ProjectViewModel(private val repo: ProjectRepository) : BaseViewModel() {
 
 
     private var projectTabsResult = MutableLiveData<List<ChapterData>>()

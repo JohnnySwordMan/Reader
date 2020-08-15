@@ -22,10 +22,10 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    implementation Libs.androidx_appcompat
-    implementation Libs.androidx_core_ktx
+    implementation Deps.androidx_appcompat
+    implementation Deps.androidx_core_ktx
 
-    implementation Libs.kotlin_stdlib_jdk7
+    implementation Deps.kotlin_stdlib_jdk7
 
     implementation project(":module:collectapi")
 

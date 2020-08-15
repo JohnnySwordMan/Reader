@@ -41,60 +41,60 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation Libs.kotlin_stdlib_jdk7
-    implementation Libs.kotlin_reflect
+    implementation Deps.kotlin_stdlib_jdk7
+    implementation Deps.kotlin_reflect
 
 
-    implementation Libs.androidx_appcompat
-    implementation Libs.androidx_core_ktx
-    implementation Libs.androidx_constraintlayout
+    implementation Deps.androidx_appcompat
+    implementation Deps.androidx_core_ktx
+    implementation Deps.androidx_constraintlayout
 
-    implementation Libs.androidx_coordinatorlayout
-    implementation Libs.material
+    implementation Deps.androidx_coordinatorlayout
+    implementation Deps.material
 
-    implementation Libs.lifecycle
+    implementation Deps.lifecycle
 
-    implementation Libs.okhttp3_logging_interceptor
-    implementation Libs.okhttp3_okhttp
+    implementation Deps.okhttp3_logging_interceptor
+    implementation Deps.okhttp3_okhttp
 
-    implementation Libs.slf4j_api
-    implementation Libs.slf4j_simple
+    implementation Deps.slf4j_api
+    implementation Deps.slf4j_simple
 
-    implementation Libs.dagger
-    kapt Libs.dagger_compiler
-    implementation Libs.dagger_android
-    implementation Libs.dagger_android_support
-    kapt Libs.dagger_android_processor
+    implementation Deps.dagger
+    kapt Deps.dagger_compiler
+    implementation Deps.dagger_android
+    implementation Deps.dagger_android_support
+    kapt Deps.dagger_android_processor
 
-    implementation Libs.rxjava
-    implementation Libs.rxandroid
+    implementation Deps.rxjava
+    implementation Deps.rxandroid
 
-    implementation Libs.retrofit
-    implementation Libs.retrofit_adapter_rxjava2
-    implementation Libs.retrofit_converter_gson
+    implementation Deps.retrofit
+    implementation Deps.retrofit_adapter_rxjava2
+    implementation Deps.retrofit_converter_gson
 
-    implementation Libs.anko_commons
-    implementation Libs.anko_sdk15
-    implementation Libs.anko_sdk15_coroutines
-    implementation Libs.anko_sdk15_listeners
-    implementation Libs.anko_appcompat_v7
-    implementation Libs.anko_appcompat_v7_listeners
+    implementation Deps.anko_commons
+    implementation Deps.anko_sdk15
+    implementation Deps.anko_sdk15_coroutines
+    implementation Deps.anko_sdk15_listeners
+    implementation Deps.anko_appcompat_v7
+    implementation Deps.anko_appcompat_v7_listeners
 
-    implementation Libs.jdsjlzx_lrecyclerview
-    implementation Libs.avatarImageView
+    implementation Deps.jdsjlzx_lrecyclerview
+    implementation Deps.avatarImageView
 
-    implementation Libs.glide
-    kapt Libs.glide_compiler
+    implementation Deps.glide
+    kapt Deps.glide_compiler
 
-    implementation Libs.agentweb
-    implementation Libs.flexbox
-    implementation Libs.roundedimageview
+    implementation Deps.agentweb
+    implementation Deps.flexbox
+    implementation Deps.roundedimageview
 
-    implementation Libs.leakcanary
+    implementation Deps.leakcanary
 
-    implementation Libs.lottie
-    implementation Libs.coroutines_core
-    implementation Libs.coroutines_android
+    implementation Deps.lottie
+    implementation Deps.coroutines_core
+    implementation Deps.coroutines_android
 
     implementation project(":common:base")
     implementation project(":core")

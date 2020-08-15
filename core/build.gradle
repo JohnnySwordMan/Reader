@@ -25,33 +25,35 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation Libs.androidx_appcompat
-    implementation Libs.androidx_core_ktx
+    implementation Deps.androidx_appcompat
+    implementation Deps.androidx_core_ktx
 
-    implementation Libs.kotlin_stdlib_jdk7
+    implementation Deps.kotlin_stdlib_jdk7
 
-    implementation Libs.dagger
-    kapt Libs.dagger_compiler
-    implementation Libs.dagger_android
-    implementation Libs.dagger_android_support
-    kapt Libs.dagger_android_processor
+    implementation Deps.dagger
+    kapt Deps.dagger_compiler
+    implementation Deps.dagger_android
+    implementation Deps.dagger_android_support
+    kapt Deps.dagger_android_processor
 
-    implementation Libs.anko_commons
-    implementation Libs.anko_sdk15
-    implementation Libs.anko_sdk15_listeners
-    implementation Libs.anko_sdk15_coroutines
-    implementation Libs.anko_appcompat_v7
-    implementation Libs.anko_appcompat_v7_listeners
+    implementation Deps.anko_commons
+    implementation Deps.anko_sdk15
+    implementation Deps.anko_sdk15_listeners
+    implementation Deps.anko_sdk15_coroutines
+    implementation Deps.anko_appcompat_v7
+    implementation Deps.anko_appcompat_v7_listeners
 
-    implementation Libs.rxjava
-    implementation Libs.rxandroid
+    implementation Deps.rxjava
+    implementation Deps.rxandroid
 
-    implementation Libs.retrofit
-    implementation Libs.retrofit_adapter_rxjava2
-    implementation Libs.retrofit_converter_gson
+    implementation Deps.retrofit
+    implementation Deps.retrofit_adapter_rxjava2
+    implementation Deps.retrofit_converter_gson
 
-    implementation Libs.kotlin_reflect
+    implementation Deps.kotlin_reflect
 
-    implementation Libs.androidx_constraintlayout
+    implementation Deps.androidx_constraintlayout
+
+    implementation Deps.viewmodel_ktx
 
 }

@@ -4,12 +4,12 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mars.core.exception.ApiErrorCode
 import com.mars.core.exception.ApiException
-import com.mars.core.rx.RxViewModel
+import com.mars.core.base.BaseViewModel
 import com.mars.reader.knowledge.model.ChapterData
 import com.mars.reader.home.model.ArticlePage
 import com.mars.reader.wechat.repo.WechatRepository
 
-class WechatViewModel(private val repo: WechatRepository) : RxViewModel() {
+class WechatViewModel(private val repo: WechatRepository) : BaseViewModel() {
 
 
     private var wechatArticlesResult = MutableLiveData<List<ChapterData>>()

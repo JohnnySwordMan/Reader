@@ -13,10 +13,11 @@ interface LoginApi {
 
     @FormUrlEncoded
     @POST("user/login")
-    fun login(
-        @Field("username") username: String,
-        @Field("password") password: String
-    ): Observable<BaseResponse<User>>
+    fun login(@Field("username") username: String, @Field("password") password: String): Observable<BaseResponse<User>>
+
+    @FormUrlEncoded
+    @POST("user/login")
+    suspend fun loginV2(@Field("username") username: String, @Field("password") password: String): BaseResponse<User>
 
 
     @GET("user/logout/json")

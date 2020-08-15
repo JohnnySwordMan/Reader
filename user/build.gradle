@@ -38,17 +38,17 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation Libs.androidx_appcompat
-    implementation Libs.androidx_core_ktx
+    implementation Deps.androidx_appcompat
+    implementation Deps.androidx_core_ktx
 
-    implementation Libs.kotlin_stdlib_jdk7
-    implementation Libs.kotlin_reflect
+    implementation Deps.kotlin_stdlib_jdk7
+    implementation Deps.kotlin_reflect
 
-    implementation Libs.rxjava
-    implementation Libs.rxandroid
+    implementation Deps.rxjava
+    implementation Deps.rxandroid
 
-    implementation Libs.retrofit
-    implementation Libs.retrofit_adapter_rxjava2
-    implementation Libs.retrofit_converter_gson
+    implementation Deps.retrofit
+    implementation Deps.retrofit_adapter_rxjava2
+    implementation Deps.retrofit_converter_gson
     implementation project(":core")
 }

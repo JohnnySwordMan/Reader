@@ -8,8 +8,8 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.1'
-        classpath Libs.kotlin_gradle_plugin
-        classpath Libs.kotlin_noarg
+        classpath Deps.kotlin_gradle_plugin
+        classpath Deps.kotlin_noarg
     }
 }
 

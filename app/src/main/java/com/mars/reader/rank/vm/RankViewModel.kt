@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.mars.core.exception.ApiErrorCode
 import com.mars.core.exception.ApiException
-import com.mars.core.rx.RxViewModel
+import com.mars.core.base.BaseViewModel
 import com.mars.reader.rank.model.RankPage
 import com.mars.reader.rank.repo.RankRepository
 
-class RankViewModel(private val repository: RankRepository) : RxViewModel() {
+class RankViewModel(private val repository: RankRepository) : BaseViewModel() {
 
     private var rankPageData = MutableLiveData<RankPage>()
 

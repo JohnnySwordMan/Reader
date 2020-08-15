@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.mars.core.di.ViewModelKey
 import com.mars.core.services.retrofit
 import com.mars.reader.login.api.LoginApi
+import com.mars.reader.login.repo.ILoginRepository
 import com.mars.reader.login.repo.LoginRepository
 import dagger.Module
 import dagger.Provides
@@ -18,14 +19,14 @@ class LoginModule {
     }
 
     @Provides
-    fun provideLoginRepository(loginApi: LoginApi): LoginRepository {
+    fun provideLoginRepository(loginApi: LoginApi): ILoginRepository {
         return LoginRepository(loginApi)
     }
 
     @Provides
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
-    fun provideLoginViewModel(repo: LoginRepository): ViewModel {
+    fun provideLoginViewModel(repo: ILoginRepository): ViewModel {
         return LoginViewModel(repo)
     }
 

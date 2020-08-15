@@ -13,7 +13,7 @@ object Versions {
     const val LOTTIE_VERSION = "2.8.0"
     const val RXJAVA_VERSION = "2.2.10"
     const val RXANDROID_VERSION = "2.1.1"
-    const val RETROFIT_VERSION = "2.3.0"
+    const val RETROFIT_VERSION = "2.6.0"
 
     const val ANDROIDX_APPCOMPAT = "1.0.2"
     const val ANDROIDX_CORE_KTX = "1.0.2"
@@ -32,9 +32,10 @@ object Versions {
     const val AGENTWEB_VERSION = "4.1.2"
     const val FLEXBOX_VERSION = "2.0.1"
     const val ROUNDED_IAMGEVIEW_VERSION = "2.3.0"
+    const val VIEWMODEL_KTX = "2.2.0"
 }
 
-object Libs {
+object Deps {
 
     // anko
     const val anko_commons = "org.jetbrains.anko:anko-commons:${Versions.ANKO_VERSION}"
@@ -120,5 +121,8 @@ object Libs {
     const val flexbox = "com.google.android:flexbox:${Versions.FLEXBOX_VERSION}"
 
     const val roundedimageview = "com.makeramen:roundedimageview:${Versions.ROUNDED_IAMGEVIEW_VERSION}"
+
+    // 协程对viewmodel的支持
+    const val viewmodel_ktx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.VIEWMODEL_KTX}"
 
 }
